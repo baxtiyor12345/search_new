@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Qidiruv</title>
+</head>
+<body>
+    <h1>Qidiruv</h1>
+    <form method="GET">
+        {{ form.as_p }}
+        <button type="submit">Izlash</button>
+    </form>
+
+    {% if query %}
+        <h2>"{{ query }}" bo‘yicha natijalar:</h2>
+        <ul>
+            {% for post in results %}
+                <li>{{ post.title }}</li>
+            {% empty %}
+                <li>Hech narsa topilmadi.</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
