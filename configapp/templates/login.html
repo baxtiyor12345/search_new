@@ -6,15 +6,15 @@
 </head>
 <body>
 
-<form action="{% url 'add_news' %}" method="post">
+<div class="mg-auto w-50 mx-auto" style="">
+    <form class="mg-auto" method="post" action="">
+        <h1 class="text-center">Login</h1>
+        {% csrf_token %}
+        {{ form.as_p}}
+        <button type="submit" class="btn btn-primary btn-block p-2">Kirish</button>
+    </form>
+</div>
 
-  {% csrf_token %}
-
-  {{ form.as_p }}
-
-  <button type="submit" class="btn btn-primary btn-block"> Yangilik qo`shish</button>
-
-</form>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
